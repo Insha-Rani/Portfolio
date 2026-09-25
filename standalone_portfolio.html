@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insha Rani | Data Scientist &amp; ML Engineer</title>
+  <meta name="description" content="Portfolio of Insha Rani - Data Scientist &amp; ML Engineer specializing in predictive modeling, statistical analysis, and interactive Streamlit applications.">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .glass-card {
+      background: rgba(10, 25, 47, 0.75);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(56, 189, 248, 0.18);
+    }
+    .glass-card:hover {
+      border-color: rgba(56, 189, 248, 0.45);
+    }
+  </style>
+</head>
+<body class="bg-[#030B1E] text-[#F1F5F9] font-sans antialiased selection:bg-sky-500 selection:text-white relative overflow-x-hidden">
+
+  <!-- Background Data Grid & Tech Glows -->
+  <div class="fixed inset-0 pointer-events-none opacity-20 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:24px_24px] -z-10"></div>
+  <div class="fixed top-[-10%] right-[-10%] w-[500px] h-[500px] rounded-full bg-blue-600/10 blur-[120px] pointer-events-none -z-10"></div>
+  <div class="fixed bottom-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-sky-500/10 blur-[120px] pointer-events-none -z-10"></div>
+
+  <!-- Top Navigation -->
+  <header class="sticky top-0 z-40 bg-[#030B1E]/85 backdrop-blur-md border-b border-sky-900/40">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-2.5 group">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-900/60 to-sky-950/80 border border-sky-500/30 flex items-center justify-center font-bold text-sm tracking-wider text-sky-400 group-hover:scale-105 transition-transform">
+          IR
+        </div>
+        <div class="flex flex-col">
+          <span class="font-extrabold text-base text-white leading-none group-hover:text-sky-400 transition-colors">Insha Rani</span>
+          <span class="text-[10px] text-sky-400 font-mono mt-0.5">Data Scientist</span>
+        </div>
+      </a>
+      <div class="flex items-center gap-3">
+        <a href="#projects" class="text-xs font-semibold text-slate-300 hover:text-sky-400 transition-colors">Projects</a>
+        <a href="#about" class="text-xs font-semibold text-slate-300 hover:text-sky-400 transition-colors">About</a>
+        <a href="#contact" class="px-4 py-1.5 rounded-full bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white text-xs font-bold shadow-md shadow-sky-500/20 transition-all">
+          Contact
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-xl mx-auto px-4 sm:px-6 pt-10 pb-20 space-y-16">
+
+    <!-- Hero Section -->
+    <section id="top" class="text-center">
+      <!-- Status Badge -->
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-950/70 border border-sky-500/30 text-xs text-sky-300 shadow-xs mb-5">
+        <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
+        <span class="font-mono text-[11px] uppercase tracking-wider">Data Science &amp; Analytics</span>
+      </div>
+
+      <h1 class="text-4xl sm:text-5xl font-black text-white tracking-tight mb-3">
+        Insha Rani
+      </h1>
+      <p class="text-base sm:text-lg text-slate-300 max-w-md mx-auto mb-6 leading-relaxed">
+        Aspiring Data Scientist turning raw datasets into actionable insights, statistical models &amp; interactive dashboards.
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row gap-3 justify-center mb-8">
+        <a href="#projects" class="py-3.5 px-6 rounded-full bg-gradient-to-r from-sky-500 via-blue-600 to-indigo-600 hover:from-sky-400 hover:via-blue-500 text-white text-sm font-bold shadow-lg shadow-sky-500/25 flex items-center justify-center gap-2 transition-all">
+          <span>Explore Projects</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+        </a>
+        <a href="https://github.com/Insha-Rani" target="_blank" rel="noopener noreferrer" class="py-3 px-6 rounded-full bg-slate-900/80 hover:bg-slate-800/90 border border-sky-900/60 hover:border-sky-500/50 text-slate-200 hover:text-white text-sm font-medium shadow-xs flex items-center justify-center gap-2 transition-all">
+          <svg class="w-4 h-4 text-sky-400" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg>
+          <span>GitHub (@Insha-Rani)</span>
+        </a>
+      </div>
+
+      <!-- Quick Metrics -->
+      <div class="grid grid-cols-3 gap-3">
+        <div class="glass-card rounded-xl p-3 shadow-md text-center">
+          <div class="text-xl sm:text-2xl font-black text-sky-400">4+</div>
+          <div class="text-[11px] text-slate-400 font-medium">DS Projects</div>
+        </div>
+        <div class="glass-card rounded-xl p-3 shadow-md text-center">
+          <div class="text-xl sm:text-2xl font-black text-sky-400">BCA</div>
+          <div class="text-[11px] text-slate-400 font-medium">CS &amp; Data Science</div>
+        </div>
+        <div class="glass-card rounded-xl p-3 shadow-md text-center">
+          <div class="text-sm sm:text-base font-bold text-sky-400 leading-tight pt-1">Python &amp; SQL</div>
+          <div class="text-[11px] text-slate-400 font-medium mt-1">Core Tech Stack</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="space-y-6">
+      <div>
+        <span class="text-[11px] font-bold uppercase tracking-widest text-sky-400 font-mono block mb-1">
+          FEATURED WORK
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight">
+          Machine Learning Models &amp; Systems
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-400 mt-1">
+          Clicking any project opens the deployed application or GitHub repository.
+        </p>
+      </div>
+
+      <!-- Project 1: Movie Recommendation System -->
+      <div class="glass-card rounded-2xl p-5 sm:p-6 shadow-md transition-all space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold tracking-wider uppercase bg-emerald-950/80 text-emerald-400 border border-emerald-500/40 font-mono">
+            ★ Live Streamlit App
+          </span>
+          <span class="text-xs font-mono text-sky-400 bg-sky-950/80 px-2 py-0.5 rounded-full border border-sky-800/40">
+            5,000+ Movies
+          </span>
+        </div>
+
+        <div>
+          <h3 class="text-lg sm:text-xl font-bold text-white hover:text-sky-400 transition-colors">
+            <a href="https://movie-recommender-system-cujliqbs3wyyzkjwmwrrjf.streamlit.app/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5">
+              <span>Movie Recommendation System</span>
+              <svg class="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            </a>
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-300 mt-1.5 leading-relaxed">
+            Content-based filtering engine using TF-IDF vectorization and Cosine Similarity on TMDB 5000 dataset. Generates real-time top-N personalized movie recommendations with live poster fetching.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-1.5 pt-1">
+          <span class="px-2 py-0.5 rounded bg-slate-900 border border-sky-900/40 text-sky-300 text-[11px] font-mono">Python</span>
+          <span class="px-2 py-0.5 rounded bg-slate-900 border border-sky-900/40 text-sky-300 text-[11px] font-mono">Streamlit</span>
+          <span class="px-2 py-0.5 rounded bg-slate-900 border border-sky-900/40 text-sky-300 text-[11px] font-mono">Cosine Similarity</span>
+          <span class="px-2 py-0.5 rounded bg-slate-900 border border-sky-900/40 text-sky-300 text-[11px] font-mono">NLP</span>
+          <span class="px-2 py-0.5 rounded bg-slate-900 border border-sky-900/40 text-sky-300 text-[11px] font-mono">TMDB API</span>
+        </div>
+
+        <div class="pt-2">
+          <a href="https://movie-recommender-system-cujliqbs3wyyzkjwmwrrjf.streamlit.app/" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-full bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white text-xs sm:text-sm font-semibold flex items-center justify-center gap-2 shadow-md shadow-sky-500/20 transition-all">
+            <span>Launch Streamlit App</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 2: California Housing Price Prediction -->
+      <div class="glass-card rounded-2xl p-5 sm:p-6 shadow-md transition-all space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold tracking-wider uppercase bg-sky-950/70 text-sky-300 border border-sky-800/40 font-mono">
+            ★ Supervised Regression
+          </span>
+          <span class="text-xs font-mono text-emerald-400 bg-emerald-950/80 px-2 py-0.5 rounded-full border border-emerald-500/30">
+            RMSE $49,850
+          </span>
+        </div>
+
+        <div>
+          <h3 class="text-lg sm:text-xl font-bold text-white hover:text-sky-400 transition-colors">
+            <a href="https://github.com/Insha-Rani" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5">
+              <span>California Housing Price Prediction</span>
+              <svg class="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            </a>
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-300 mt-1.5 leading-relaxed">
+            Predictive regression pipeline evaluating 20,640 census blocks across 8 socio-economic and geographical features. Trained with Gradient Boosting and Random Forest with 10-fold cross-validation.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-1.5 pt-1">
+          <span class="px-2 py-0.5 rounded bg-slate-900 border border-sky-900/40 text-sky-300 text-[11px] font-mono">Python</span>
+          <span class="px-2 py-0.5 rounded bg-slate-900 border border-sky-900/40 text-sky-300 text-[11px] font-mono">Scikit-Learn</span>
+          <span class="px-2 py-0.5 rounded bg-slate-900 border border-sky-900/40 text-sky-300 text-[11px] font-mono">Gradient Boosting</span>
+          <span class="px-2 py-0.5 rounded bg-slate-900 border border-sky-900/40 text-sky-300 text-[11px] font-mono">Feature Engineering</span>
+        </div>
+
+        <div class="pt-2">
+          <a href="https://github.com/Insha-Rani" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-full bg-slate-900 hover:bg-slate-800 border border-sky-900/60 hover:border-sky-500/50 text-white text-xs sm:text-sm font-medium flex items-center justify-center gap-2 transition-all">
+            <span>View on GitHub</span>
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 3: Credit Card Fraud Detection -->
+      <div class="glass-card rounded-2xl p-5 sm:p-6 shadow-md transition-all space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold tracking-wider uppercase bg-sky-950/70 text-sky-300 border border-sky-800/40 font-mono">
+            ★ Fraud Detection &amp; Anomaly
+          </span>
+          <span class="text-xs font-mono text-emerald-400 bg-emerald-950/80 px-2 py-0.5 rounded-full border border-emerald-500/30">
+            -87% False Positives (0.90 Thr)
+          </span>
+        </div>
+
+        <div>
+          <h3 class="text-lg sm:text-xl font-bold text-white hover:text-sky-400 transition-colors">
+            <a href="https://github.com/Insha-Rani" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5">
+              <span>Credit Card Fraud Detection &amp; Threshold Optimization</span>
+              <svg class="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            </a>
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-300 mt-1.5 leading-relaxed">
+            Financial fraud detection on 284,807 transactions (0.17% fraud). Balanced data with SMOTE, scaled Time &amp; Amount with StandardScaler, trained Logistic Regression (92% recall) &amp; Random Forest, and tuned threshold to 0.90 to drop false alarms from 115 to 15.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-1.5 pt-1">
+          <span class="px-2 py-0.5 rounded bg-slate-900 border border-sky-900/40 text-sky-300 text-[11px] font-mono">Python</span>
+          <span class="px-2 py-0.5 rounded bg-slate-900 border border-sky-900/40 text-sky-300 text-[11px] font-mono">SMOTE</span>
+          <span class="px-2 py-0.5 rounded bg-slate-900 border border-sky-900/40 text-sky-300 text-[11px] font-mono">Random Forest</span>
+          <span class="px-2 py-0.5 rounded bg-slate-900 border border-sky-900/40 text-sky-300 text-[11px] font-mono">Threshold Tuning</span>
+          <span class="px-2 py-0.5 rounded bg-slate-900 border border-sky-900/40 text-sky-300 text-[11px] font-mono">Scikit-Learn</span>
+        </div>
+
+        <div class="pt-2">
+          <a href="https://github.com/Insha-Rani" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-full bg-slate-900 hover:bg-slate-800 border border-sky-900/60 hover:border-sky-500/50 text-white text-xs sm:text-sm font-medium flex items-center justify-center gap-2 transition-all">
+            <span>View on GitHub</span>
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="glass-card rounded-2xl p-6 sm:p-7 shadow-md space-y-4">
+      <div class="flex items-center justify-between">
+        <span class="text-[11px] font-bold uppercase tracking-widest text-sky-400 font-mono">
+          ABOUT &amp; BACKGROUND
+        </span>
+        <span class="text-xs text-slate-400">Amroha, UP, India</span>
+      </div>
+
+      <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight">
+        Data Science, Mathematical Modeling &amp; Machine Learning
+      </h2>
+
+      <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+        Passionate aspiring Data Scientist with a solid foundation in Python, statistical modeling, and data pipelines. Experienced in handling complex real-world data, building supervised regression and classification models, and deploying live interactive systems with Streamlit.
+      </p>
+
+      <!-- Education & Certification -->
+      <div class="space-y-2.5 pt-2 border-t border-sky-900/40">
+        <div class="p-3 rounded-xl bg-slate-900/80 border border-sky-900/40">
+          <div class="text-xs font-bold text-white">Bachelor of Computer Applications (BCA)</div>
+          <div class="text-[11px] text-slate-300">Shoolini University • 2024 – 2027 (Expected)</div>
+          <div class="text-[10px] text-slate-400 mt-0.5">Relevant Coursework: DBMS, Mathematics, Web Tech (HTML, CSS, JavaScript), C++/Java</div>
+        </div>
+        <div class="p-3 rounded-xl bg-slate-900/80 border border-sky-900/40">
+          <div class="text-xs font-bold text-white">O Level Diploma in Computer Concepts</div>
+          <div class="text-[11px] text-slate-300">NIELIT (National Institute of Electronics &amp; Information Technology)</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="space-y-5">
+      <div>
+        <span class="text-[11px] font-bold uppercase tracking-widest text-sky-400 font-mono block mb-1">
+          GET IN TOUCH
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight">
+          Let&apos;s Connect &amp; Collaborate
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-400 mt-1">
+          Feel free to reach out for Data Science roles, research inquiries, or project discussions.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <!-- Email -->
+        <a href="mailto:irsaifi584@gmail.com" class="p-4 rounded-xl glass-card flex items-center gap-3 transition-colors shadow-2xs">
+          <div class="w-10 h-10 rounded-lg bg-sky-950/80 border border-sky-500/30 text-sky-400 flex items-center justify-center font-bold text-sm">
+            @
+          </div>
+          <div>
+            <div class="text-[10px] font-mono uppercase text-slate-400">Email</div>
+            <div class="text-xs font-semibold text-white">irsaifi584@gmail.com</div>
+          </div>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/insha-rani-22bb10338/" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl glass-card flex items-center gap-3 transition-colors shadow-2xs">
+          <div class="w-10 h-10 rounded-lg bg-sky-950/80 border border-sky-500/30 text-sky-400 flex items-center justify-center font-bold text-sm">
+            in
+          </div>
+          <div>
+            <div class="text-[10px] font-mono uppercase text-slate-400">LinkedIn</div>
+            <div class="text-xs font-semibold text-white">Insha Rani</div>
+          </div>
+        </a>
+
+        <!-- GitHub -->
+        <a href="https://github.com/Insha-Rani" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl glass-card flex items-center gap-3 transition-colors shadow-2xs">
+          <div class="w-10 h-10 rounded-lg bg-sky-950/80 border border-sky-500/30 text-sky-400 flex items-center justify-center font-bold text-sm">
+            gh
+          </div>
+          <div>
+            <div class="text-[10px] font-mono uppercase text-slate-400">GitHub</div>
+            <div class="text-xs font-semibold text-white">github.com/Insha-Rani</div>
+          </div>
+        </a>
+
+        <!-- Phone / Location -->
+        <a href="tel:+917300955321" class="p-4 rounded-xl glass-card flex items-center gap-3 transition-colors shadow-2xs">
+          <div class="w-10 h-10 rounded-lg bg-sky-950/80 border border-sky-500/30 text-sky-400 flex items-center justify-center font-bold text-sm">
+            📞
+          </div>
+          <div>
+            <div class="text-[10px] font-mono uppercase text-slate-400">Phone &amp; Location</div>
+            <div class="text-xs font-semibold text-white">+91 7300955321 (Amroha, UP)</div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-sky-900/40 py-8 text-center text-xs text-slate-400">
+    <div class="max-w-xl mx-auto px-4">
+      <p>&copy; 2026 Insha Rani • Data Science &amp; Machine Learning Portfolio</p>
+      <p class="mt-1 text-[11px] text-slate-500">All project links open live deployed applications &amp; GitHub repos.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

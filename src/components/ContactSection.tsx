@@ -1,0 +1,102 @@
+import React from 'react';
+import { ArrowUpRight, Mail, Code, Briefcase, LayoutGrid } from 'lucide-react';
+import { CONTACT_CHANNELS } from '../data/portfolioData';
+
+interface ContactSectionProps {
+  onDirectMessage: (initialSubject?: string) => void;
+}
+
+export const ContactSection: React.FC<ContactSectionProps> = ({ onDirectMessage }) => {
+  const getIcon = (iconName: string) => {
+    switch (iconName) {
+      case 'mail':
+        return <Mail className="w-5 h-5 text-sky-400" />;
+      case 'code':
+        return <Code className="w-5 h-5 text-sky-400" />;
+      case 'briefcase':
+        return <Briefcase className="w-5 h-5 text-sky-400" />;
+      case 'layout-grid':
+        return <LayoutGrid className="w-5 h-5 text-sky-400" />;
+      default:
+        return <Mail className="w-5 h-5 text-sky-400" />;
+    }
+  };
+
+  const handleChannelClick = (channel: typeof CONTACT_CHANNELS[0]) => {
+    if (channel.id === 'email') {
+      onDirectMessage('Project Collaboration Inquiry');
+    } else {
+      window.open(channel.link, '_blank', 'noopener,noreferrer');
+    }
+  };
+
+  return (
+    <section id="contact" className="py-10 max-w-[560px] mx-auto px-4 sm:px-6">
+      {/* Eyebrow & Headline */}
+      <div className="mb-6">
+        <span className="text-[11px] font-bold uppercase tracking-widest text-sky-400 font-['Plus_Jakarta_Sans'] block mb-1">
+          GET IN TOUCH
+        </span>
+        <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight font-['Plus_Jakarta_Sans'] mb-2">
+          Let&apos;s Connect &amp; Build
+        </h2>
+        <p className="text-sm sm:text-base text-slate-400">
+          Have an interesting ML project, research inquiry, or collaboration in mind?
+        </p>
+      </div>
+
+      {/* 4 Contact Cards */}
+      <div className="flex flex-col gap-3">
+        {CONTACT_CHANNELS.map((channel) => (
+          <div
+            key={channel.id}
+            onClick={() => handleChannelClick(channel)}
+            className="group w-full glass-panel hover:border-sky-400/50 rounded-2xl p-4 sm:p-5 flex items-center justify-between transition-all duration-200 cursor-pointer shadow-md shadow-sky-950/20"
+            id={`contact-card-${channel.id}`}
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                handleChannelClick(channel);
+              }
+            }}
+          >
+            {/* Left: Icon inside rounded square + Text */}
+            <div className="flex items-center gap-3.5">
+              <div className="w-11 h-11 rounded-xl bg-slate-900/90 border border-sky-500/30 flex items-center justify-center shrink-0 group-hover:border-sky-400/60 transition-colors">
+                {getIcon(channel.icon)}
+              </div>
+              <div className="text-left">
+                <div className="text-[11px] font-medium text-slate-400 font-mono tracking-tight uppercase">
+                  {channel.label}
+                </div>
+                <div className="text-sm sm:text-base font-semibold text-white group-hover:text-sky-400 transition-colors">
+                  {channel.value}
+                </div>
+              </div>
+            </div>
+
+            {/* Right: Arrow Up Right */}
+            <div className="p-2 text-slate-400 group-hover:text-sky-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all">
+              <ArrowUpRight className="w-5 h-5" />
+            </div>
+          </div>
+        ))}
+
+        {/* Quick direct phone / location footer info */}
+        <div className="mt-2 p-3.5 rounded-xl glass-panel flex items-center justify-between text-xs text-slate-300">
+          <div className="flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 inline-block shadow-[0_0_8px_rgba(52,211,153,0.8)]" />
+            <span>Based in <strong className="text-white">Amroha, UP, India</strong></span>
+          </div>
+          <a
+            href="tel:+917300955321"
+            className="font-medium text-sky-400 hover:text-sky-300 hover:underline"
+          >
+            +91 7300955321
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+};
