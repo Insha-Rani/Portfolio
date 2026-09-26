@@ -67,10 +67,10 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                 <CheckCircle2 className="w-8 h-8" />
               </div>
               <h3 className="text-xl font-bold text-white font-['Plus_Jakarta_Sans']">
-                Message Dispatched!
+                Message Sent!
               </h3>
               <p className="text-sm text-slate-300 max-w-xs mx-auto">
-                Thank you for reaching out, {name || 'collaborator'}. I review messages with quantitative precision and will get back to you promptly.
+                Thank you for reaching out, {name || 'there'}! I will get back to you as soon as possible.
               </p>
               <button
                 onClick={() => {
