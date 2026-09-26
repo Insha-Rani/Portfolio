@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowDown, Code2, Compass, Cpu, Database, Network } from 'lucide-react';
+import { ArrowDown, Code2, Compass } from 'lucide-react';
 import { HERO_METRICS, TECHNICAL_SKILLS } from '../data/portfolioData';
 
 interface HeroProps {
@@ -30,10 +30,16 @@ export const Hero: React.FC<HeroProps> = ({
         </span>
       </div>
 
-      {/* Main Name with subtle gradient */}
-      <h1 className="text-4xl sm:text-5xl font-black text-white tracking-tight leading-[1.1] mb-4 font-['Plus_Jakarta_Sans']">
-        Insha Rani
-      </h1>
+      {/* Greeting & Main Name */}
+      <div className="mb-4">
+        <span className="text-base sm:text-lg font-medium text-sky-400 font-mono tracking-wide block mb-1.5 flex items-center gap-2">
+          <span>Hello, I&apos;m</span>
+          <span className="inline-block w-6 h-[1.5px] bg-sky-400/60" />
+        </span>
+        <h1 className="text-4xl sm:text-5xl font-black text-white tracking-tight leading-[1.1] font-['Plus_Jakarta_Sans']">
+          Insha Rani
+        </h1>
+      </div>
 
       {/* Subtitle / Tagline */}
       <p className="text-lg sm:text-xl text-slate-300 leading-relaxed font-normal mb-8">
@@ -83,7 +89,6 @@ export const Hero: React.FC<HeroProps> = ({
 
       {/* Technical Expertise Section */}
       <div className="pt-2">
-        {/* Header with Icon + Production Ready flag */}
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-2">
             <Compass className="w-4 h-4 text-sky-400" />
@@ -99,14 +104,13 @@ export const Hero: React.FC<HeroProps> = ({
 
         {/* Skill Pill Badges */}
         <div className="flex flex-wrap gap-2">
-          {TECHNICAL_SKILLS.map((skill) => (
+          {TECHNICAL_SKILLS.map((skill, index) => (
             <button
-              key={skill}
+              key={index}
               onClick={() => onSkillClick && onSkillClick(skill)}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-900/90 hover:bg-sky-950/80 border border-sky-900/50 hover:border-sky-400/60 text-slate-300 hover:text-white text-xs font-medium transition-all shadow-2xs cursor-pointer group"
+              className="text-xs font-medium px-3 py-1.5 rounded-full bg-slate-900/90 text-slate-200 hover:text-white border border-sky-900/60 hover:border-sky-500/50 hover:bg-sky-950/60 transition-all cursor-pointer shadow-2xs"
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-sky-400 group-hover:scale-125 transition-transform shadow-[0_0_8px_rgba(56,189,248,0.8)]" />
-              <span>{skill}</span>
+              {skill}
             </button>
           ))}
         </div>
