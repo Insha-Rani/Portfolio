@@ -1,5 +1,5 @@
 import React from 'react';
-import { User, ArrowRight, GraduationCap, Award, MapPin, CheckCircle2 } from 'lucide-react';
+import { User, ArrowRight, GraduationCap, Award, CheckCircle2 } from 'lucide-react';
 
 interface AboutSectionProps {
   onCollaborateClick: () => void;
@@ -10,16 +10,12 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onCollaborateClick }
     <section id="about" className="py-10 max-w-[560px] mx-auto px-4 sm:px-6">
       <div className="glass-panel rounded-2xl p-6 sm:p-7 shadow-lg shadow-sky-950/20">
         {/* Eyebrow */}
-        <div className="flex items-center justify-between mb-3">
+        <div className="flex items-center mb-3">
           <div className="flex items-center gap-2">
             <User className="w-4 h-4 text-sky-400" />
             <span className="text-[11px] font-bold uppercase tracking-widest text-sky-400 font-['Plus_Jakarta_Sans']">
               ABOUT &amp; BACKGROUND
             </span>
-          </div>
-          <div className="flex items-center gap-1 text-[11px] font-medium text-slate-400">
-            <MapPin className="w-3.5 h-3.5 text-sky-400" />
-            <span>Amroha, UP, India</span>
           </div>
         </div>
 

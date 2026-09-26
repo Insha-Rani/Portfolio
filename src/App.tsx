@@ -8,6 +8,7 @@ import { Footer } from './components/Footer';
 import { BottomNav, NavTab } from './components/BottomNav';
 import { InteractiveDemoModal } from './components/InteractiveDemoModal';
 import { ContactModal } from './components/ContactModal';
+import { DataChartsBackground } from './components/DataChartsBackground';
 import { PROJECTS } from './data/portfolioData';
 import { Project } from './types';
 
@@ -93,11 +94,8 @@ export default function App() {
   };
 
   return (
-    <div id="top" className="min-h-screen bg-[#030B1E] text-[#F1F5F9] relative selection:bg-sky-500 selection:text-white overflow-x-hidden">
-      {/* Background radial glow & subtle cyber data grid */}
-      <div className="fixed inset-0 pointer-events-none opacity-20 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:24px_24px] -z-10" />
-      <div className="fixed top-[-10%] right-[-10%] w-[500px] h-[500px] rounded-full bg-blue-600/10 blur-[120px] pointer-events-none -z-10" />
-      <div className="fixed bottom-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-sky-500/10 blur-[120px] pointer-events-none -z-10" />
+    <div id="top" className="min-h-screen bg-[#030B1E] text-[#F1F5F9] relative isolate selection:bg-sky-500 selection:text-white overflow-x-hidden">
+      <DataChartsBackground />
 
       {/* Top Fixed / Sticky Navigation Bar */}
       <Navbar onContactClick={() => handleOpenContact('Data Science Inquiry')} />

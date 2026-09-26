@@ -36,6 +36,77 @@
   border-color: rgba(56, 189, 248, 0.36);
 }
 
+@keyframes heroCursorBlink {
+  0%, 45% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes dataFloat {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -7px, 0);
+  }
+}
+
+@keyframes dataPulse {
+  0%, 100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes dataCodeReveal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 4px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.hero-cursor {
+  animation: heroCursorBlink 1s steps(1, end) infinite;
+}
+
+.data-float {
+  animation: dataFloat 12s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.data-pulse {
+  animation: dataPulse 2.6s ease-in-out infinite;
+}
+
+.data-code-line {
+  opacity: 0;
+  animation: dataCodeReveal 0.7s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-cursor,
+  .data-float,
+  .data-pulse,
+  .data-code-line {
+    animation: none;
+  }
+
+  .data-code-line {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 6px;

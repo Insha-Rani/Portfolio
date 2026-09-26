@@ -20,14 +20,6 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onDirectMessage 
     }
   };
 
-  const handleChannelClick = (channel: typeof CONTACT_CHANNELS[0]) => {
-    if (channel.id === 'email') {
-      window.location.href = 'mailto:irsaifi584@gmail.com';
-    } else {
-      window.open(channel.link, '_blank', 'noopener,noreferrer');
-    }
-  };
-
   return (
     <section id="contact" className="py-10 max-w-[560px] mx-auto px-4 sm:px-6">
       {/* Eyebrow & Headline */}
@@ -46,18 +38,13 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onDirectMessage 
       {/* 3 Contact Cards - direct click to target, no plain text exposure */}
       <div className="flex flex-col gap-3">
         {CONTACT_CHANNELS.map((channel) => (
-          <div
+          <a
             key={channel.id}
-            onClick={() => handleChannelClick(channel)}
+            href={channel.link}
+            target={channel.id === 'email' ? undefined : '_blank'}
+            rel={channel.id === 'email' ? undefined : 'noopener noreferrer'}
             className="group w-full glass-panel hover:border-sky-400/50 rounded-2xl p-4 sm:p-5 flex items-center justify-between transition-all duration-200 cursor-pointer shadow-md shadow-sky-950/20"
             id={`contact-card-${channel.id}`}
-            role="button"
-            tabIndex={0}
-            onKeyDown={(e) => {
-              if (e.key === 'Enter' || e.key === ' ') {
-                handleChannelClick(channel);
-              }
-            }}
           >
             {/* Left: Icon inside rounded square + Text */}
             <div className="flex items-center gap-3.5">
@@ -78,7 +65,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onDirectMessage 
             <div className="p-2 text-slate-400 group-hover:text-sky-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all">
               <ArrowUpRight className="w-5 h-5" />
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </section>
