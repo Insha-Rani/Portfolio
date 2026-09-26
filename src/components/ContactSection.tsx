@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUpRight, Mail, Code, Briefcase, LayoutGrid } from 'lucide-react';
+import { ArrowUpRight, Mail, Code, Briefcase } from 'lucide-react';
 import { CONTACT_CHANNELS } from '../data/portfolioData';
 
 interface ContactSectionProps {
@@ -15,8 +15,6 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onDirectMessage 
         return <Code className="w-5 h-5 text-sky-400" />;
       case 'briefcase':
         return <Briefcase className="w-5 h-5 text-sky-400" />;
-      case 'layout-grid':
-        return <LayoutGrid className="w-5 h-5 text-sky-400" />;
       default:
         return <Mail className="w-5 h-5 text-sky-400" />;
     }
@@ -24,7 +22,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onDirectMessage 
 
   const handleChannelClick = (channel: typeof CONTACT_CHANNELS[0]) => {
     if (channel.id === 'email') {
-      onDirectMessage('Project Collaboration Inquiry');
+      window.location.href = 'mailto:irsaifi584@gmail.com';
     } else {
       window.open(channel.link, '_blank', 'noopener,noreferrer');
     }
@@ -41,11 +39,11 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onDirectMessage 
           Let&apos;s Connect &amp; Build
         </h2>
         <p className="text-sm sm:text-base text-slate-400">
-          Have an interesting ML project, research inquiry, or collaboration in mind?
+          Click any channel below to reach out directly:
         </p>
       </div>
 
-      {/* 4 Contact Cards */}
+      {/* 3 Contact Cards - direct click to target, no plain text exposure */}
       <div className="flex flex-col gap-3">
         {CONTACT_CHANNELS.map((channel) => (
           <div
@@ -68,10 +66,10 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onDirectMessage 
               </div>
               <div className="text-left">
                 <div className="text-[11px] font-medium text-slate-400 font-mono tracking-tight uppercase">
-                  {channel.label}
+                  {channel.category}
                 </div>
                 <div className="text-sm sm:text-base font-semibold text-white group-hover:text-sky-400 transition-colors">
-                  {channel.value}
+                  {channel.label}
                 </div>
               </div>
             </div>
@@ -82,20 +80,6 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onDirectMessage 
             </div>
           </div>
         ))}
-
-        {/* Quick direct phone / location footer info */}
-        <div className="mt-2 p-3.5 rounded-xl glass-panel flex items-center justify-between text-xs text-slate-300">
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 inline-block shadow-[0_0_8px_rgba(52,211,153,0.8)]" />
-            <span>Based in <strong className="text-white">Amroha, UP, India</strong></span>
-          </div>
-          <a
-            href="tel:+917300955321"
-            className="font-medium text-sky-400 hover:text-sky-300 hover:underline"
-          >
-            +91 7300955321
-          </a>
-        </div>
       </div>
     </section>
   );
