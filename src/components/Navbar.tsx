@@ -9,35 +9,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
   return (
     <header className="sticky top-0 z-40 w-full bg-[#030B1E]/85 backdrop-blur-md border-b border-sky-900/40 transition-all">
       <div className="max-w-[560px] mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-        {/* Left: Brand Icon + Monogram */}
+        {/* Left: IR Monogram only */}
         <a 
           href="#top" 
-          className="flex items-center gap-2.5 group focus:outline-none focus:ring-2 focus:ring-sky-400/30 rounded-lg p-1"
+          className="flex items-center group focus:outline-none focus:ring-2 focus:ring-sky-400/30 rounded-xl p-1"
           aria-label="Insha Rani Home"
         >
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-900/60 to-sky-950/80 border border-sky-500/30 flex items-center justify-center text-sky-400 shadow-xs group-hover:border-sky-400/60 transition-colors">
-            {/* Neural network / ML node icon */}
-            <svg 
-              className="w-5 h-5 text-sky-400 group-hover:scale-105 transition-transform" 
-              viewBox="0 0 24 24" 
-              fill="none" 
-              stroke="currentColor" 
-              strokeWidth="2" 
-              strokeLinecap="round" 
-              strokeLinejoin="round"
-            >
-              <circle cx="12" cy="5" r="2" />
-              <circle cx="5" cy="19" r="2" />
-              <circle cx="19" cy="19" r="2" />
-              <circle cx="12" cy="12" r="2" />
-              <line x1="12" y1="7" x2="12" y2="10" />
-              <line x1="6.8" y1="17.6" x2="10.2" y2="13.4" />
-              <line x1="17.2" y1="17.6" x2="13.8" y2="13.4" />
-            </svg>
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-sky-500/20 via-blue-900/40 to-slate-900/90 border border-sky-400/40 flex items-center justify-center shadow-[0_0_15px_rgba(56,189,248,0.25)] group-hover:border-sky-400 group-hover:scale-105 transition-all">
+            <span className="font-mono font-black text-sm tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-400">
+              IR
+            </span>
           </div>
-          <span className="font-extrabold text-xl tracking-tight text-white font-['Plus_Jakarta_Sans'] group-hover:text-sky-400 transition-colors">
-            IR
-          </span>
         </a>
 
         {/* Right: Glowing Cyan Pill Button "Get in Touch ↗" */}
