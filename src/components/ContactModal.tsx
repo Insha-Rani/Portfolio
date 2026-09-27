@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { X, Send, CheckCircle2, Mail } from 'lucide-react';
 
 interface ContactModalProps {
@@ -17,7 +17,17 @@ export const ContactModal: React.FC<ContactModalProps> = ({
   const [subject, setSubject] = useState(initialSubject || 'Data Science Project Inquiry');
   const [message, setMessage] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submissionError, setSubmissionError] = useState('');
   const [copied, setCopied] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      setSubject(initialSubject || 'Data Science Project Inquiry');
+      setIsSubmitted(false);
+      setSubmissionError('');
+    }
+  }, [initialSubject, isOpen]);
 
   if (!isOpen) return null;
 
@@ -27,9 +37,46 @@ export const ContactModal: React.FC<ContactModalProps> = ({
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
+    setIsSubmitting(true);
+    setSubmissionError('');
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: 'ec20d2c0-0a7b-4658-9d8b-bfafe15fc544',
+          name,
+          email,
+          subject,
+          message,
+        }),
+      });
+
+      const result = await response.json().catch(() => null);
+
+      if (!response.ok || !result?.success) {
+        throw new Error(result?.message || 'The message service did not accept the submission.');
+      }
+
+      setIsSubmitted(true);
+      setName('');
+      setEmail('');
+      setSubject('');
+      setMessage('');
+    } catch (error) {
+      const reason = error instanceof Error ? error.message : 'An unexpected error occurred.';
+      const alertMessage = `I couldn't send your message right now. ${reason} Please try again or email insharani02@gmail.com directly.`;
+      setSubmissionError(alertMessage);
+      window.alert(alertMessage);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -66,11 +113,11 @@ export const ContactModal: React.FC<ContactModalProps> = ({
               <div className="w-14 h-14 bg-emerald-950/70 border border-emerald-500/40 rounded-full flex items-center justify-center mx-auto text-emerald-400">
                 <CheckCircle2 className="w-8 h-8" />
               </div>
-              <h3 className="text-xl font-bold text-white font-['Plus_Jakarta_Sans']">
-                Message Sent!
-              </h3>
-              <p className="text-sm text-slate-300 max-w-xs mx-auto">
-                Thank you for reaching out, {name || 'there'}! I will get back to you as soon as possible.
+              <p
+                role="status"
+                className="text-sm font-semibold text-emerald-300 max-w-xs mx-auto"
+              >
+                Message sent successfully! I will get back to you shortly.
               </p>
               <button
                 onClick={() => {
@@ -157,11 +204,18 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                 />
               </div>
 
+              {submissionError && (
+                <p role="alert" className="text-xs text-red-300">
+                  {submissionError}
+                </p>
+              )}
+
               <button
                 type="submit"
+                disabled={isSubmitting}
                 className="w-full py-3 px-4 rounded-full bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white text-sm font-semibold transition-all shadow-md shadow-sky-500/20 flex items-center justify-center gap-2 cursor-pointer"
               >
-                <span>Dispatch Inquiry</span>
+                <span>{isSubmitting ? 'Sending...' : 'Dispatch Inquiry'}</span>
                 <Send className="w-4 h-4" />
               </button>
             </form>
