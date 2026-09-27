@@ -32,7 +32,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
   if (!isOpen) return null;
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText('insharani02@gmail.com');
+    navigator.clipboard.writeText('irsiafi584@gmail.com');
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -71,7 +71,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
       setMessage('');
     } catch (error) {
       const reason = error instanceof Error ? error.message : 'An unexpected error occurred.';
-      const alertMessage = `I couldn't send your message right now. ${reason} Please try again or email insharani02@gmail.com directly.`;
+      const alertMessage = `I couldn't send your message right now. ${reason} Please try again or email irsiafi584@gmail.com directly.`;
       setSubmissionError(alertMessage);
       window.alert(alertMessage);
     } finally {
@@ -140,10 +140,10 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                   <div>
                     <div className="text-[10px] font-mono uppercase text-slate-400">Direct Inbox</div>
                     <a
-                      href="mailto:insharani02@gmail.com"
+                      href="mailto:irsiafi584@gmail.com"
                       className="text-xs font-bold text-white hover:text-sky-400 transition-colors"
                     >
-                      insharani02@gmail.com
+                      irsiafi584@gmail.com
                     </a>
                   </div>
                 </div>
