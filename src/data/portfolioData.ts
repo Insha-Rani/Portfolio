@@ -9,7 +9,7 @@ export const HERO_METRICS: MetricCard[] = [
   {
     value: 'BCA',
     label: 'Data Science',
-    sublabel: 'BCA (Specialization) • Shoolini University',
+    sublabel: 'Shoolini University',
   },
   {
     value: 'Python & SQL',
