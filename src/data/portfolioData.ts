@@ -34,6 +34,8 @@ export const TECHNICAL_SKILLS = [
   'Gradient Boosting Regressor',
   'ColumnTransformer Pipelines',
   'Git & GitHub',
+  'Advanced Excel (Pivot Tables, VLOOKUP, Data Cleaning)',
+'Data Reporting & Documentation',
 ];
 
 export const PROJECTS: Project[] = [
