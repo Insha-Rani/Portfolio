@@ -59,7 +59,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onCollaborateClick }
             </div>
             <div>
               <div className="text-xs font-bold text-white">
-                O Level Diploma in Computer Concepts
+                O Level Diploma in IT
               </div>
               <div className="text-[11px] text-slate-300">
                 NIELIT (National Institute of Electronics &amp; Information Technology)
