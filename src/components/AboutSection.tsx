@@ -42,7 +42,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onCollaborateClick }
             </div>
             <div>
               <div className="text-xs font-bold text-white">
-                Bachelor of Computer Applications (BCA)
+                Bachelor of Computer Applications (BCA) with Data Science Specialization
               </div>
               <div className="text-[11px] text-slate-300">
                 Shoolini University • 2024 – 2027 (Expected)
