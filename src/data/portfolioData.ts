@@ -225,8 +225,8 @@ export const CONTACT_CHANNELS: ContactChannel[] = [
     id: 'email',
     icon: 'mail',
     label: 'Email Address',
-    value: 'irsiafi584@gmail.com',
-    link: 'mailto:irsiafi584@gmail.com',
+    value: 'inshasaifi449@gmail.com',
+    link: 'mailto:inshasaifi449@gmail.com',
     category: 'Direct Message',
   },
   {

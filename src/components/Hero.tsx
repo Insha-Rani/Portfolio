@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowDown, Code2, Compass } from 'lucide-react';
+import {Github, Download } from 'lucide-react';
 import { HERO_METRICS, TECHNICAL_SKILLS } from '../data/portfolioData';
 
 const GREETING = "Hello & Welcome, I'm";
@@ -96,6 +97,16 @@ export const Hero: React.FC<HeroProps> = ({
           >
             <Code2 className="w-4 h-4 text-sky-400" />
             <span>GitHub (@Insha-Rani)</span>
+          </a>
+          <a
+            href="/Insha_Rani_Resume.pdf"
+            download="Insha_Rani_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-medium text-sm text-cyan-400 bg-cyan-950/40 border border-cyan-500/30 hover:bg-cyan-500/10 hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(6,182,212,0.25)] transition-all duration-300"
+          >
+            <Download className="w-4 h-4 animate-bounce" />
+            <span>Download CV</span>
           </a>
         </div>
 

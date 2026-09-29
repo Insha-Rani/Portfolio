@@ -32,7 +32,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
   if (!isOpen) return null;
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText('irsiafi584@gmail.com');
+    navigator.clipboard.writeText('inshasaifi449@gmail.com');
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -140,10 +140,10 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                   <div>
                     <div className="text-[10px] font-mono uppercase text-slate-400">Direct Inbox</div>
                     <a
-                      href="mailto:irsiafi584@gmail.com"
+                      href="mailto:inshasaifi449@gmail.com"
                       className="text-xs font-bold text-white hover:text-sky-400 transition-colors"
                     >
-                      irsiafi584@gmail.com
+                      inshasaifi449@gmail.com
                     </a>
                   </div>
                 </div>
